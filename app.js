@@ -26,7 +26,32 @@ document.addEventListener("DOMContentLoaded", (e) => {
        p_3.innerText = p_3_value;
        div_1.append(p_3);
 
-       document.querySelector(".display").append(div_1);
+       const delete_button = document.createElement("button");
+       delete_button.className = "delete_button";
+       delete_button.innerText = "Delete";
+       delete_button.addEventListener("click", (event) => {
+            const myObj = event.target.parentNode;
+            myObj.remove();
+            });
+       div_1.append(delete_button);
+       
 
+       document.querySelector(".display").append(div_1);
+   });
+
+   let delete_button_list = document.querySelectorAll(".delete_button");
+   delete_button_list.forEach((button) => {
+       button.addEventListener("click", (event) => {
+        // event.preventDefault();  Don't need this, b/c we are not dealing within a form.
+
+        console.log(event);
+
+        console.log(event.target);
+        
+        console.log(event.target.parentNode);
+
+        const myObj = event.target.parentNode;
+        myObj.remove();
+       });
    });
 });
