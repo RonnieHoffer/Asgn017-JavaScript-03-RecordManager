@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
        const delete_button = document.createElement("button");
        delete_button.className = "delete_button";
-       delete_button.innerText = "Delete";
+       delete_button.innerHTML = "<img class='record_image' src='./images/close.png'>";
        delete_button.addEventListener("click", (event) => {
-            const myObj = event.target.parentNode;
+            const myObj = event.target.parentNode.parentNode;
             myObj.remove();
             });
        div_1.append(delete_button);
@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         
         console.log(event.target.parentNode);
 
-        const myObj = event.target.parentNode;
+        console.log(event.target.parentNode.parentNode);
+
+        const myObj = event.target.parentNode.parentNode;
         myObj.remove();
        });
    });
