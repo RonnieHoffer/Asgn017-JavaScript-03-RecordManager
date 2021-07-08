@@ -1,9 +1,47 @@
+.heading {
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 5px solid black;
+}
+
+.form {
+    float: left;
+    width: 30%;
+}
+
+.display {
+    float: right;
+    padding: 50px;
+    width: 60%;
+    border-left: 5px solid black;
+}
+
 .record_image {
     height: 4rem;
     width: 4rem;
 }
 
 .record_entry {
+    margin: 30px;
     border: 1px solid black;
-    width: 40%;
+    width: 300px;
+    height: 200px;
+    position: relative;
 }
+
+.delete_button {
+    display: inline-block;
+    float: right;
+    margin:5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* .record_image {
+    display: inline-block;
+    float: left;
+    margin:5px 5px 0 0;
+    position: absolute;
+} */
