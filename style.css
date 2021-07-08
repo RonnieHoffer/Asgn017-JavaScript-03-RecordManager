@@ -7,13 +7,15 @@
 
 .form {
     float: left;
-    width: 30%;
+    width: 25%;
 }
 
 .display {
+    position: relative;
+    display: flex;
     float: right;
     padding: 50px;
-    width: 60%;
+    width: 65%;
     border-left: 5px solid black;
 }
 
